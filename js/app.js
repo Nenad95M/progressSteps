@@ -21,6 +21,7 @@ document.getElementById('prev').addEventListener('click', function () {
     if (currentActive != 1) {
         currentActive--;
         circles[currentActive].classList.remove('active');
+        console.log(currentActive);
     }
     // console.log(currentActive);
     if (width != 0) {
@@ -28,7 +29,6 @@ document.getElementById('prev').addEventListener('click', function () {
         changeProgress(width);
     }
 })
-
 //funkcija koja menja sirinu progresa
 function changeProgress(widthSize) {
     document.querySelector('.progress').style.width = `${widthSize}%`;
